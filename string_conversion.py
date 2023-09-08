@@ -66,8 +66,8 @@ def string_conversion(data, col_name, output="int"):
     # replace '$' and ','
     data[col_name] = (
         data[col_name]
-        .str.replace(r"$", "", regex=True)
-        .str.replace(r",", "", regex=True)
+        .str.replace(r"$", "", regex=False)
+        .str.replace(r",", "", regex=False)
     )
 
     # change to 'int' or 'float'
